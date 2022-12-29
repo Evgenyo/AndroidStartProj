@@ -14,34 +14,33 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_constrainedWidth_default="spread"
+        android:layout_marginTop="16dp"
         android:text="view_1"
         android:textSize="24dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/view_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="56dp"
         android:text="14"
         android:textSize="14dp"
-        android:layout_margin="56dp"
         app:layout_constraintBaseline_toBaselineOf="@id/view_1"
+        app:layout_constraintLeft_toRightOf="@id/view_1" />
+
+    <TextView
+        android:id="@+id/viev_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="56dp"
+        android:layaut_height="wrap_content"
+        android:text="view3"
+        android:textSize="14sp"
         app:layout_constraintLeft_toRightOf="@id/view_1"
-        />
-   <TextView
-       android:id="@+id/viev_3"
-       android:layout_width="wrap_content"
-       android:layaut_height="wrap_content"
-       android:layout_marginLeft="56dp"
-       android:text="view3"
-       android:textSize="14sp"
-       app:layout_constraintTop_toBottomOf="@id/view_1"
-       app:layout_constraintLeft_toRightOf="@id/view_1"
-      />
+        app:layout_constraintTop_toBottomOf="@id/view_1" />
+
     <TextView
         android:id="@+id/view_4"
         android:layout_width="wrap_content"
@@ -50,11 +49,22 @@
         android:text="view4"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@id/view_2"
-        app:layout_constraintLeft_toRightOf="@id/view_2"
-        />
+        app:layout_constraintLeft_toRightOf="@id/view_2" />
 
-
-
+    <ImageView
+        android:id="@+id/ori"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="384dp"
+        android:background="@drawable/ic_launcher_background"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.474" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
