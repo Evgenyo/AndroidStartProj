@@ -2,6 +2,7 @@ package ru.synergy.androidstartproj;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -48,6 +49,8 @@ public class Calculator extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 calcuclateAnswe();
+                Intent i = new Intent(Calculator.this,MainActivity.class);
+                startActivity(i);
 
             }
         });
