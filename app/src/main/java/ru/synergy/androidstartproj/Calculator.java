@@ -50,7 +50,7 @@ public class Calculator extends AppCompatActivity {
             public void onClick(View view) {
                 calcuclateAnswe();
                 Intent i = new Intent(Calculator.this,MainActivity.class);
-                startActivity(i);
+               // startActivity(i);
 
             }
         });
@@ -96,6 +96,12 @@ public class Calculator extends AppCompatActivity {
             RadioButton divide = (RadioButton) findViewById(R.id.divide);
 
             TextView answer = (TextView) findViewById(R.id.result);
+
+//            try {
+//                int a = 25 / 0;
+//            } catch (ArithmeticException e){
+//                e.printStackTrace();
+//            }
 
             float numone = Integer.parseInt(numOne.getText().toString());
             float numtwo = Integer.parseInt(numTwo.getText().toString());
