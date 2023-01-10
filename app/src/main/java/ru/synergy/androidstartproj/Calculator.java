@@ -17,6 +17,8 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.io.IOException;
+
 public class Calculator extends AppCompatActivity {
 
     private static final String LogcatTag = "CALCULATOR_ACTIVITY";
@@ -49,10 +51,21 @@ public class Calculator extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 calcuclateAnswe();
+
+
+                //прерывание
+                //    e.printStackTrace();
+                //  Toast.makeText(Calculator.this, e.getMassage(), Toast.LENGTH_LONG).show();
+                //  finish();
+
+                //востановление
+                //   e.printStackTrace();
+                //   dropFields();
+
                 Intent i = new Intent(Calculator.this,MainActivity.class);
                // startActivity(i);
-
             }
+
         });
     }
 
@@ -98,9 +111,11 @@ public class Calculator extends AppCompatActivity {
             TextView answer = (TextView) findViewById(R.id.result);
 
 //            try {
-//                int a = 25 / 0;
+//              // int a = 25 / 0;
+//               throw new ArithmeticException("i am exception");
 //            } catch (ArithmeticException e){
-//                e.printStackTrace();
+//                Toast.makeText(this, "There is a problem inside the app", Toast.LENGTH_SHORT).show();
+//               finish();
 //            }
 
             float numone = Integer.parseInt(numOne.getText().toString());
@@ -126,6 +141,8 @@ public class Calculator extends AppCompatActivity {
             }
 
             answer.setText("The answer is" + solution);
+
+            throw new ArithmeticException("i am generated exception");
 
     }
 
