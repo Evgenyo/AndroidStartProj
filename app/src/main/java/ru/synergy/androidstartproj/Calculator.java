@@ -60,6 +60,7 @@ public class Calculator extends AppCompatActivity {
 
                 //востановление
                 //   e.printStackTrace();
+                // Toast.makeText(Calculator.this, e.getMassage(), Toast.LENGTH_LONG).show();
                 //   dropFields();
 
                 Intent i = new Intent(Calculator.this,MainActivity.class);
